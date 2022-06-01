@@ -1,0 +1,31 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.titulo {
+  color: rgb(52,89,230);
+  text-transform: uppercase;
+}
+
+.titulo-divisor {
+  height: 0.4rem;
+  width: 5rem;
+  margin: 1rem;
+  background-color: rgb(255, 157, 24);
+  border-radius: 0.25rem;
+}
