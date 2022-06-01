@@ -17,5 +17,7 @@ namespace Restaurante.Models
         public Categoria? Categoria { get; set; }
         [Required] 
         public string Descripcion { get; set; }
+        [Display(Name = "Imagen del platillo")]
+        public string? UrlImagen { get; set; }
     }
 }

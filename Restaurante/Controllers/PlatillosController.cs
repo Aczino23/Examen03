@@ -13,10 +13,12 @@ namespace Restaurante.Controllers
     public class PlatillosController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public PlatillosController(ApplicationDbContext context)
+        public PlatillosController(ApplicationDbContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostEnvironment;
         }
 
         // GET: Platillos
@@ -57,10 +59,23 @@ namespace Restaurante.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Precio,IdCategoria,Descripcion")] Platillo platillo)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Precio,IdCategoria,Descripcion,UrlImagen")] Platillo platillo)
         {
             if (ModelState.IsValid)
             {
+               string rutaPrincipal = _hostEnvironment.WebRootPath;
+                var archivos = HttpContext.Request.Form.Files; 
+                if (archivos.Count() > 0)
+                {
+                    string nombreArchivo = Guid.NewGuid().ToString();
+                    var subidas = Path.Combine(rutaPrincipal, @"imagenes\platillos\");
+                    var extension = Path.GetExtension(archivos[0].FileName);
+                    using (var fileStream = new FileStream(Path.Combine(subidas, nombreArchivo + extension), FileMode.Create))
+                    {
+                        archivos[0].CopyTo(fileStream);
+                    }
+                    platillo.UrlImagen = @"imagenes\platillos\" + nombreArchivo + extension;
+                }
                 _context.Add(platillo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -91,7 +106,7 @@ namespace Restaurante.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Precio,IdCategoria,Descripcion")] Platillo platillo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Precio,IdCategoria,Descripcion,UrlImagen")] Platillo platillo)
         {
             if (id != platillo.Id)
             {
@@ -102,6 +117,33 @@ namespace Restaurante.Controllers
             {
                 try
                 {
+                    string rutaPrincipal = _hostEnvironment.WebRootPath;
+                    var archivos = HttpContext.Request.Form.Files; 
+                    if (archivos.Count() > 0)
+                    {
+                        Platillo? platilloBD = await _context.Platillos.FindAsync(id);
+                        if (platilloBD != null)
+                        {
+                            if (platilloBD.UrlImagen != null)
+                            {
+                                var rutaImgenActual = Path.Combine(rutaPrincipal, platilloBD.UrlImagen);
+                                if (System.IO.File.Exists(rutaImgenActual))
+                                {
+                                    System.IO.File.Delete(rutaImgenActual);
+                                }
+                            }
+                            _context.Entry(platilloBD).State = EntityState.Detached;
+                        }  
+                        string nombreArchivo = Guid.NewGuid().ToString();
+                        var subidas = Path.Combine(rutaPrincipal, @"imagenes\platillos\");
+                        var extension = Path.GetExtension(archivos[0].FileName);
+                        using (var fileStream = new FileStream(Path.Combine(subidas, nombreArchivo + extension), FileMode.Create))
+                        {
+                            archivos[0].CopyTo(fileStream);
+                        }
+                        platillo.UrlImagen = @"imagenes\platillos\" + nombreArchivo + extension;
+                        _context.Entry(platillo).State = EntityState.Modified;
+                    }
                     _context.Update(platillo);
                     await _context.SaveChangesAsync();
                 }

@@ -1,6 +1,66 @@
+@model IEnumerable<Restaurante.Models.Platillo>
+
 @{
     ViewData["Title"] = "Menu";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Esta es la pagina de menu</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center mt-3">
+            <h2 class="titulo">Menú De Platillos</h2>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <div class="titulo-divisor"></div>
+        </div>
+    </div>
+</div>
+
+@if (Model.Count() > 0)
+  {
+    // listar cada una de las categorias y los platillos de cada categoria
+    List<string> categorias = new List<string>();
+    @foreach (var platillo in Model.OrderBy(o => o.Id))
+    {
+        if (!categorias.Contains(platillo.Categoria.Nombre))
+        {
+            categorias.Add(platillo.Categoria.Nombre);
+        }       
+    }
+    @foreach (var categoria in categorias)
+    {
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center mt-3">
+                <h2> 
+                    @categoria
+                </h2>
+            </div>
+        </div>
+        @foreach (var platillo in Model.OrderBy(o => o.Id))
+        {
+            if (platillo.Categoria.Nombre == categoria)
+            {
+                <div class="col-sm-12 col-md-3 justify-content-center mb-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/@platillo.UrlImagen" class="card-img-top" width="200px" height="200px" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@platillo.Nombre</h5>
+                            <p class="card-text">
+                                @platillo.Descripcion
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">@Html.DisplayNameFor(model => model.Precio): $@platillo.Precio</li>
+                        </ul>
+                        <div class="card-body">                            
+                            <button class="boton-nice">
+                                <a asp-action="Details" asp-controller="Platillos" asp-route-id="@platillo.Id">
+                                    Ver Detalles
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    }
+}

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<Restaurante.Models.Categoria>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -40,4 +42,25 @@
             <div class="titulo-divisor"></div>
         </div>
     </div>
+</div>
+<div class="row">
+  @if (Model.Count() > 0)
+  {
+    @foreach (var categoria in Model.OrderBy(o => o.Id))
+    {
+      <div class="col-sm-12 col-md-3 justify-content-center mb-3">
+            <div class="card" style="width: 18rem;">
+              <img src="/@categoria.UrlImagen" class="card-img-top" width="200px"  height="200px" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">@categoria.Nombre</h5>
+                <button class="boton-nice">
+                  <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Menu" asp-route-id="@categoria.Id">
+                    Ver Menú
+                  </a>
+                </button>
+              </div>
+            </div>
+      </div>
+    }
+  }
 </div>

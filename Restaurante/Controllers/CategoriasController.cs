@@ -13,10 +13,12 @@ namespace Restaurante.Controllers
     public class CategoriasController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public CategoriasController(ApplicationDbContext context)
+        public CategoriasController(ApplicationDbContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostEnvironment;
         }
 
         // GET: Categorias
@@ -56,14 +58,28 @@ namespace Restaurante.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre")] Categoria categoria)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,UrlImagen")] Categoria categoria)
         {
             if (ModelState.IsValid)
             {
+                string rutaPrincipal = _hostEnvironment.WebRootPath;
+                var archivos = HttpContext.Request.Form.Files; 
+                if (archivos.Count() > 0)
+                {
+                    string nombreArchivo = Guid.NewGuid().ToString();
+                    var subidas = Path.Combine(rutaPrincipal, @"imagenes\categorias\");
+                    var extension = Path.GetExtension(archivos[0].FileName);
+                    using (var fileStream = new FileStream(Path.Combine(subidas, nombreArchivo + extension), FileMode.Create))
+                    {
+                        archivos[0].CopyTo(fileStream);
+                    }
+                    categoria.UrlImagen = @"imagenes\categorias\" + nombreArchivo + extension;
+                }
                 _context.Add(categoria);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            //ViewData["Id"] = new SelectList(_context.Categorias, "Id", "Id", categoria.Id);
             return View(categoria);
         }
 
@@ -88,7 +104,7 @@ namespace Restaurante.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre")] Categoria categoria)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,UrlImagen")] Categoria categoria)
         {
             if (id != categoria.Id)
             {
@@ -99,6 +115,33 @@ namespace Restaurante.Controllers
             {
                 try
                 {
+                    string rutaPrincipal = _hostEnvironment.WebRootPath;
+                    var archivos = HttpContext.Request.Form.Files; 
+                    if (archivos.Count() > 0)
+                    {
+                        Categoria? categoriaBD = await _context.Categorias.FindAsync(id);
+                        if (categoriaBD != null)
+                        {
+                            if (categoriaBD.UrlImagen != null)
+                            {
+                                var rutaImgenActual = Path.Combine(rutaPrincipal, categoriaBD.UrlImagen);
+                                if (System.IO.File.Exists(rutaImgenActual))
+                                {
+                                    System.IO.File.Delete(rutaImgenActual);
+                                }
+                            }
+                            _context.Entry(categoriaBD).State = EntityState.Detached;
+                        }  
+                        string nombreArchivo = Guid.NewGuid().ToString();
+                        var subidas = Path.Combine(rutaPrincipal, @"imagenes\categorias\");
+                        var extension = Path.GetExtension(archivos[0].FileName);
+                        using (var fileStream = new FileStream(Path.Combine(subidas, nombreArchivo + extension), FileMode.Create))
+                        {
+                            archivos[0].CopyTo(fileStream);
+                        }
+                        categoria.UrlImagen = @"imagenes\categorias\" + nombreArchivo + extension;
+                        _context.Entry(categoria).State = EntityState.Modified;
+                    }
                     _context.Update(categoria);
                     await _context.SaveChangesAsync();
                 }
@@ -115,6 +158,7 @@ namespace Restaurante.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            //ViewData["Id"] = new SelectList(_context.Categorias, "Id", "Id", categoria.Id);
             return View(categoria);
         }
 
