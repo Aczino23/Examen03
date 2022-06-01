@@ -63,7 +63,7 @@ namespace Restaurante.Controllers
         {
             if (ModelState.IsValid)
             {
-               string rutaPrincipal = _hostEnvironment.WebRootPath;
+                string rutaPrincipal = _hostEnvironment.WebRootPath;
                 var archivos = HttpContext.Request.Form.Files; 
                 if (archivos.Count() > 0)
                 {

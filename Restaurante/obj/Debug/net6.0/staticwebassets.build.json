@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JsbxbXlPRyk7tKXobXhxkNP8qrpkHg0xme9/xBAxSGU=",
+  "Hash": "DD5Rp+Jwk4A4ton2xMpyrujFZ4xXpf0yGmZqc5cDuiI=",
   "Source": "Restaurante",
   "BasePath": "_content/Restaurante",
   "Mode": "Default",
@@ -1122,6 +1122,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\categorias\\1c229f1e-2994-4e21-9003-93984c7efe5e.jpeg",
+      "SourceId": "Restaurante",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Examen03\\Restaurante\\wwwroot\\",
+      "BasePath": "_content/Restaurante",
+      "RelativePath": "imagenes/categorias/1c229f1e-2994-4e21-9003-93984c7efe5e.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\categorias\\1c229f1e-2994-4e21-9003-93984c7efe5e.jpeg"
+    },
+    {
       "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\categorias\\37e9bb18-6c0f-4159-ac8f-0c15ba77ec08.png",
       "SourceId": "Restaurante",
       "SourceType": "Discovered",
@@ -1137,23 +1154,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagenes\\categorias\\37e9bb18-6c0f-4159-ac8f-0c15ba77ec08.png"
-    },
-    {
-      "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\categorias\\428ec2e4-5119-4549-aa8f-cf6bad10fc40.jpeg",
-      "SourceId": "Restaurante",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Examen03\\Restaurante\\wwwroot\\",
-      "BasePath": "_content/Restaurante",
-      "RelativePath": "imagenes/categorias/428ec2e4-5119-4549-aa8f-cf6bad10fc40.jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\categorias\\428ec2e4-5119-4549-aa8f-cf6bad10fc40.jpeg"
     },
     {
       "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\categorias\\53f0fbc7-9491-4456-bcf7-052a90944d67.jpg",
@@ -1205,23 +1205,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagenes\\categorias\\c0d6ab13-dca9-47ea-aa1f-86463c34d890.png"
-    },
-    {
-      "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\categorias\\c64894b0-8fc8-4a79-bd25-6f063404b2d6.jpeg",
-      "SourceId": "Restaurante",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Examen03\\Restaurante\\wwwroot\\",
-      "BasePath": "_content/Restaurante",
-      "RelativePath": "imagenes/categorias/c64894b0-8fc8-4a79-bd25-6f063404b2d6.jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\categorias\\c64894b0-8fc8-4a79-bd25-6f063404b2d6.jpeg"
     },
     {
       "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\logos\\logo.png",
