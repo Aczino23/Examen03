@@ -29,7 +29,7 @@ public class HomeController : Controller
         return View();
     }
 
-     public async Task<IActionResult> Menu()
+     public async Task<IActionResult> Menu(int id)
     {
         var applicationDbContext = _context.Platillos.Include(p => p.Categoria);
         return View(await applicationDbContext.ToListAsync());
