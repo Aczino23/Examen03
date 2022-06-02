@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KL6uD4+KNvogidBVOUxjb0ZF7NO+HmKXPhHZprrA4vs=",
+  "Hash": "HTbmo3s0Wecl0VYQQ6bRzjejvKXPwX3sOVL42dXrWgg=",
   "Source": "Restaurante",
   "BasePath": "_content/Restaurante",
   "Mode": "Default",
@@ -1258,12 +1258,12 @@
       "OriginalItemSpec": "wwwroot\\imagenes\\logos\\logo2.webp"
     },
     {
-      "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\platillos\\33201c01-b5ba-42fe-8975-46d66675894b.jpg",
+      "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\platillos\\1678c6b7-d7e5-431e-bf9f-babde14c67aa.jpg",
       "SourceId": "Restaurante",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Examen03\\Restaurante\\wwwroot\\",
       "BasePath": "_content/Restaurante",
-      "RelativePath": "imagenes/platillos/33201c01-b5ba-42fe-8975-46d66675894b.jpg",
+      "RelativePath": "imagenes/platillos/1678c6b7-d7e5-431e-bf9f-babde14c67aa.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1272,7 +1272,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\platillos\\33201c01-b5ba-42fe-8975-46d66675894b.jpg"
+      "OriginalItemSpec": "wwwroot\\imagenes\\platillos\\1678c6b7-d7e5-431e-bf9f-babde14c67aa.jpg"
+    },
+    {
+      "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\platillos\\5c0fab3f-3d04-43bd-b013-b3355e23db14.jpg",
+      "SourceId": "Restaurante",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Examen03\\Restaurante\\wwwroot\\",
+      "BasePath": "_content/Restaurante",
+      "RelativePath": "imagenes/platillos/5c0fab3f-3d04-43bd-b013-b3355e23db14.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\platillos\\5c0fab3f-3d04-43bd-b013-b3355e23db14.jpg"
     },
     {
       "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\platillos\\7d7ce6c4-fbb9-4346-a845-64729538ee73.jpeg",

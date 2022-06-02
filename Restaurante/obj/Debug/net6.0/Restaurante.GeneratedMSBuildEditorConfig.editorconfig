@@ -8,89 +8,89 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Restaurante
 build_property.RootNamespace = Restaurante
-build_property.ProjectDir = d:\Examen03\Restaurante\
+build_property.ProjectDir = D:\Examen03\Restaurante\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\Examen03\Restaurante
+build_property.MSBuildProjectDirectory = D:\Examen03\Restaurante
 build_property._RazorSourceGeneratorDebug = 
 
-[d:/Examen03/Restaurante/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/Examen03/Restaurante/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Categorias/Create.cshtml]
+[D:/Examen03/Restaurante/Views/Categorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Categorias/Delete.cshtml]
+[D:/Examen03/Restaurante/Views/Categorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Categorias/Details.cshtml]
+[D:/Examen03/Restaurante/Views/Categorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Categorias/Edit.cshtml]
+[D:/Examen03/Restaurante/Views/Categorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Categorias/Index.cshtml]
+[D:/Examen03/Restaurante/Views/Categorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Home/Index.cshtml]
+[D:/Examen03/Restaurante/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Home/Menu.cshtml]
+[D:/Examen03/Restaurante/Views/Home/Menu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Home/Privacy.cshtml]
+[D:/Examen03/Restaurante/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Platillos/Create.cshtml]
+[D:/Examen03/Restaurante/Views/Platillos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Platillos/Delete.cshtml]
+[D:/Examen03/Restaurante/Views/Platillos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Platillos/Details.cshtml]
+[D:/Examen03/Restaurante/Views/Platillos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Platillos/Edit.cshtml]
+[D:/Examen03/Restaurante/Views/Platillos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Platillos/Index.cshtml]
+[D:/Examen03/Restaurante/Views/Platillos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Shared/Error.cshtml]
+[D:/Examen03/Restaurante/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Shared/_LoginPartial.cshtml]
+[D:/Examen03/Restaurante/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Examen03/Restaurante/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/_ViewImports.cshtml]
+[D:/Examen03/Restaurante/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/_ViewStart.cshtml]
+[D:/Examen03/Restaurante/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Examen03/Restaurante/Views/Shared/_Layout.cshtml]
+[D:/Examen03/Restaurante/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rtbghfn6lq
