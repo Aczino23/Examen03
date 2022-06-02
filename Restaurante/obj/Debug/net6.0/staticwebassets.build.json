@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HTbmo3s0Wecl0VYQQ6bRzjejvKXPwX3sOVL42dXrWgg=",
+  "Hash": "0yFXdQ4a0OIG5YMSwktaX/tIndTWquQ8kGfyhgmT+Tc=",
   "Source": "Restaurante",
   "BasePath": "_content/Restaurante",
   "Mode": "Default",
@@ -1256,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagenes\\logos\\logo2.webp"
+    },
+    {
+      "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\platillos\\00d4df69-88d5-43f8-b224-71bc4fcd94d7.jpg",
+      "SourceId": "Restaurante",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Examen03\\Restaurante\\wwwroot\\",
+      "BasePath": "_content/Restaurante",
+      "RelativePath": "imagenes/platillos/00d4df69-88d5-43f8-b224-71bc4fcd94d7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\platillos\\00d4df69-88d5-43f8-b224-71bc4fcd94d7.jpg"
     },
     {
       "Identity": "D:\\Examen03\\Restaurante\\wwwroot\\imagenes\\platillos\\1678c6b7-d7e5-431e-bf9f-babde14c67aa.jpg",
